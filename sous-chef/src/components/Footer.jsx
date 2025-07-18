@@ -1,8 +1,10 @@
+
 const Footer = () => {
-    return(
+    return (
         <footer>
             <p>Coded By: Caleb Hallock</p>
-            <p>GitHub Link</p>
+            <a href="https://github.com/challock-arch/sous-chef.git">            <i id="github-icon" className="fa-brands fa-github fa-2x"></i>
+</a>
         </footer>
     )
 }
