@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import './topNav.css'
 
 const NavMenu = () => {
     return (
@@ -10,7 +11,7 @@ const NavMenu = () => {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/About">About</Link></li>
-                    <li><Link to="/Login-Register">Login / Register</Link></li>
+                    <li><Link to="/Login-Register">Login/Register</Link></li>
                 </ul>
             </nav>
         </header>
