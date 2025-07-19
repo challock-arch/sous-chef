@@ -1,0 +1,19 @@
+[
+        {
+            "RecipeNo.": 1,
+            "Name":"Peanut Butter and Jelly",
+            "Serving-Size": 1,
+            "Ingredients":[
+                "Peanut Butter",
+                "Bread",
+                "Jelly"
+            ],
+            "Steps": [
+                "1. Pull two pieces of bread out onto a plate",
+                "2. With a knife or spatula, spread the peanut butter onto on slice of bread.",
+                "3. With a knife or spacual, spread the jelly onto the other slide of bread.",
+                "4. Put both slices of bread together, mashing the peanut butter and jelly together between them.",
+                "OPTIONAL: Slice the sandwich in half diagonally and share with a friend"
+            ]
+        }
+    ]
