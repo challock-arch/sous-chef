@@ -1,0 +1,5 @@
+.step-container {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px;
+}

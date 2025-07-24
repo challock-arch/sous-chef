@@ -31,28 +31,30 @@ function App() {
             "Jelly"
         ],
         steps: {
-            "1": "Pull two pieces of bread out onto a plate",
-            "2": "With a knife or spatula, spread the peanut butter onto on slice of bread.",
-            "3": "With a knife or spatula, spread the jelly onto the other slide of bread.",
-            "4": "Put both slices of bread together, mashing the peanut butter and jelly together between them.",
-            "5": "OPTIONAL: Slice the sandwich in half diagonally and share with a friend"
+            1: "Pull two pieces of bread out onto a plate",
+            2: "With a knife or spatula, spread the peanut butter onto on slice of bread.",
+            3: "With a knife or spatula, spread the jelly onto the other slide of bread.",
+            4: "Put both slices of bread together, mashing the peanut butter and jelly together between them.",
+            5: "OPTIONAL: Slice the sandwich in half diagonally and share with a friend"
         }
     },
         {
         recipeNo: 2,
-        name: "Peanut Butter and Jelly",
-        servingSize: 1,
+        name: "Sausage and Egg Casserole",
+        servingSize: 8,
         ingredients: [
-            "Bread",
-            "Peanut Butter",
-            "Jelly"
+            "Pillsbury Crescent Rolls",
+            "Sausage",
+            "Eggs",
+            "Milk",
+            "American Cheese"
         ],
         steps: {
-            "1": "Pull two pieces of bread out onto a plate",
-            "2": "With a knife or spatula, spread the peanut butter onto on slice of bread.",
-            "3": "With a knife or spatula, spread the jelly onto the other slide of bread.",
-            "4": "Put both slices of bread together, mashing the peanut butter and jelly together between them.",
-            "5": "OPTIONAL: Slice the sandwich in half diagonally and share with a friend"
+            1: "Spread Crescent Roll dough in bottom of dish",
+            2: "Whip eggs and milk together (add salt and pepper to taste)",
+            3: "Cook sausage, drain the grease, & spread over crescent roll dough.",
+            4: "Pour egg mixture over sausage and top with American Cheese Slices.",
+            5: "Bake at 375 deg. for 25 minutes or until egg is fully cooked"
         }
     }
   ])
