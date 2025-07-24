@@ -67,6 +67,19 @@ body, main{
     padding: 15px;
 }
 
+.recipe-container > * :hover {
+    animation: pulseScale 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulseScale {
+    0% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
 .user-recipes-container {
     display: flex;
     flex-flow: row wrap;
