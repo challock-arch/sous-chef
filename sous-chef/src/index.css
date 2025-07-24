@@ -17,20 +17,30 @@ button {
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
-    left: 0;
     bottom: 0;
-    width: 100%;
-    background-color: gray;
+    width: stretch;
+    background-color: darkolivegreen;
 }
 
-footer p, a {
-    padding-left: 2%;
-    padding-right: 2%;
+.footer-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    padding-bottom: 0;
+}
+
+.footer-links{
+    align-self: flex-end;
+    padding: 0 0 10px 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 a :visited {

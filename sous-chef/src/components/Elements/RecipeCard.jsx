@@ -1,35 +1,25 @@
-const RecipeCard = () => {
-    let dummyRecipe = {
-            RecipeNo: 1,
-            Name: "Peanut Butter and Jelly",
-            ServingSize: 1,
-            Ingredients:[
-                "Peanut Butter",
-                "Bread",
-                "Jelly"
-            ],
-            Steps: [
-                "1. Pull two pieces of bread out onto a plate",
-                "2. With a knife or spatula, spread the peanut butter onto on slice of bread.",
-                "3. With a knife or spacual, spread the jelly onto the other slide of bread.",
-                "4. Put both slices of bread together, mashing the peanut butter and jelly together between them.",
-                "OPTIONAL: Slice the sandwich in half diagonally and share with a friend"
-            ]
+import defaultImage from '../../assets/cuttingBoard.jpg'
+import { Link } from 'react-router';
 
-    }
+const RecipeCard = ({name, servingSize, recipeNo}) => {
 
     return (
-        <div className="recipe-container">
+        <div className="recipe-container" key={`${recipeNo}`}>
             <div>
-                <h3>Image</h3>
+                <img className="recipe-image" src={defaultImage} style={{width: 300, height:100}}/>
             </div>
             <div>
-                <h2>{`${dummyRecipe.Name}`}</h2>
-                <h3>Serving Size: {`${dummyRecipe.ServingSize}`}</h3>
+                <h2>{`${name}`}</h2>
+                <h3>Serving Size: {`${servingSize}`}</h3>
             </div>
             <div>
+                <Link to={`/misenplace/${recipeNo}`}>
                 <button>Let's Make It!</button>
+                </Link>
+                {/* Button for Edit Feature to be added later */}
+                {/* <Link to={`/edit-recipe/${recipeNo}`}>
                 <button>Edit</button>
+                </Link> */}
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import { useParams } from 'react-router'
+import { Link, useParams } from 'react-router'
 import recipeData from '../Data/recipeData.json'
 import ErrorPage from './ErrorPage';
 import { useState } from 'react';
@@ -27,7 +27,7 @@ const Walkthrough = () => {
     }
 
     function isLastStep(currentStep) {
-        if(currentStep >= steps.length-1) {
+        if(currentStep >= recipe.steps.length-1) {
             return `hidden`
         } return `visible`
     }
@@ -39,12 +39,6 @@ const Walkthrough = () => {
     const handlePreviousClick = (e) => {
         setCurrentStep(prev => prev -1);
     };
-    
-    // console.log(recipeNo);
-    // console.log(ingredients);
-    // console.log(name);
-    // console.log(servingSize);
-    // console.log(steps);
 
     if (!recipe) {
         return <ErrorPage />
@@ -60,6 +54,7 @@ const Walkthrough = () => {
         </div>
         <div className='button-container'>
             <button onClick={handlePreviousClick} style={{visibility: isFirstStep(currentStep)}}>Previous</button>
+            <Link to="/user-profile"><button>Return to User Profile</button></Link>
             <button onClick={handleNextClick} style={{visibility: isLastStep(currentStep)}}>Next</button>
         </div>
         </>

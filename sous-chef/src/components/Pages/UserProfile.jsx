@@ -1,43 +1,37 @@
+import { useState } from "react";
 import RecipeCard from "../Elements/RecipeCard"
-import userData from "../Data/userData.json"
-import recipeData from "../Data/recipeData.json"
+import { Link } from "react-router";
+import userIcon from "../../assets/userIconStandIn.webp"
 
-const UserProfile = () => {
-    const dummyUser = {
-        name: "John Smith",
-        username: "johnnychef",
-        recipeCount: 3
-    }
+const UserProfile = ({userData, recipeData, updateRecipes}) => {
 
+    let [keyCounter, setKeyCounter] = useState(0);
+    // console.log(userData);
     return (
         <>
             <main className="user-profile-container">
                 <div className="user-card-container">
-                    <h2>Image</h2>
+                    <img src={userIcon} alt="user icon" width="300px" />
                     <div>
-                        <h2>{`${dummyUser.name}`}</h2>
-                        <h3><em>{`${dummyUser.username}`}</em></h3>
-                        <h3>Recipe Count: {`${dummyUser.recipeCount}`}</h3>
+                        <h2>{`${userData.name}`}</h2>
+                        <h3><em>{`${userData.username}`}</em></h3>
                     </div>
                 </div>
-                {/* <div>
-                    <select>
-                        <option>Sort...</option>
-                        <option>Sort A-Z</option>
-                        <option>Sort Z-A</option>
-                    </select>
-                    <button>Sort</button>
-                </div> */}
                 <div className="user-recipes-container">
-                    {recipeData.map (recipe => {
+                    {recipeData.map ((recipe, index) => {
                         return (
+                            <div key={index}>
                             <RecipeCard 
                                 name={recipe.name}
                                 servingSize={recipe.servingSize}
                                 recipeNo={recipe.recipeNo}
                             />
+                            </div>
                         )
                     })}
+                </div>
+                <div>
+                    <Link to="/new-recipe"><button>New Recipe</button></Link>
                 </div>
             </main>
         </>

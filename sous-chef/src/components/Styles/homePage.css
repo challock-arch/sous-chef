@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    padding: 5rem;
+    padding-top:50px;
+}
+
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.welcome-splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: stretch;
+    height: 450px;
+    background-image: url("../../assets/cuttingBoard.jpg");
+}
+
+.about-container {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 25px 50px 75px 50px;
+    padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 425px) {
+    h1 {font-size: 3rem;}
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {font-size: 4rem;}
+}

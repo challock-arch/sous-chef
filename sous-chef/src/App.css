@@ -1,11 +1,23 @@
-h1 {
-    text-align: center;
-    padding-top:50px;
+body, main{
+    padding: 0;
+    margin: 0;
+    background-color: hsl(48, 91%, 96%);
 }
 
-.overview-container {
-    display: inline-flex;
-    flex-direction: column;
+.main-container {
+    padding-top: 100px;
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.main-container table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .login-form-container {
@@ -13,7 +25,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vw;
+    height: 44vw;
     row-gap: 25px;
 }
 
@@ -48,12 +60,11 @@ h1 {
 .recipe-container {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
     border: 1px solid black;
     border-radius: 15px;
     width: 300px;
-    height: 250px;
     padding: 15px;
-    padding-bottom: 0;
 }
 
 .user-recipes-container {
@@ -61,15 +72,55 @@ h1 {
     flex-flow: row wrap;
     justify-content:flex-start;
     gap: 30px;
+    margin: 50px;
 }
 
 .user-profile-container {
     display: flex;
     flex-flow: column nowrap;
     gap: 30px;
+    padding-top: 75px;
 }
 
 .user-card-container {
     display: flex;
     flex-flow: row nowrap;
+}
+
+.new-recipe-container {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin:15px;
+    align-items: center;
+}
+
+a {
+    color: black;
+}
+
+a :visited {
+    color: black;
+}
+
+.steps-container {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 100px 10px 10px 10px;
+    color: grey;
 }

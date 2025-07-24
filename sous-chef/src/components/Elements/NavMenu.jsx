@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import './topNav.css'
+import '../Styles/topNav.css'
 
 const NavMenu = () => {
     return (
@@ -7,11 +7,10 @@ const NavMenu = () => {
             <nav className="topnav">
                 <div>
                     <p className="logo">Logo</p>
-                </div>
+                </div >
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/About">About</Link></li>
-                    <li><Link to="/Login-Register">Login/Register</Link></li>
+                    <Link to="/"><li>Home</li></Link>
+                    <Link to="/register"><li>Get Started</li></Link>
                 </ul>
             </nav>
         </header>
