@@ -3,7 +3,7 @@ import { Link } from "react-router";
 const Navigation = () => {
     return (
         <header>
-            <nav class="flex w-auto p-2 bg-lime-950 text-white rounded-md m-1">
+            <nav class="flex w-full p-2 bg-lime-950 text-white rounded-md m-1 fixed">
                 <div class="flex-none">
                     <Link to="/">Logo Placeholder</Link>
                 </div>

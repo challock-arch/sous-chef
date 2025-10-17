@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer class="w-screen absolute bottom-0 p-3 bg-lime-950 text-white flex ">
+        <footer class="w-screen fixed bottom-0 p-3 bg-lime-950 text-white flex ">
             <div class="align-left flex-auto basis-1/2">
             <p>&copy; 2025 Caleb Hallock</p>
             </div>
