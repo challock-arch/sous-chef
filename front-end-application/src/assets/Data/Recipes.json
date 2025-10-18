@@ -1,0 +1,194 @@
+[
+    {
+        "recipe_id": 1,
+        "name": "Spaghetti Bolognese",
+        "calories" : 600,
+        "ingredients": [
+            {
+                "quantity": 200,
+                "unit-of-measure": "g",
+                "ingredient": "spaghetti noodles"
+            },
+            {
+                "quantity": 100,
+                "unit-of-measure": "g",
+                "ingredient": "minced beef"
+            },
+            {
+                "quantity": 1,
+                "unit-of-measure": "count",
+                "ingredient": "onion, chopped"
+            },
+            {
+                "quantity": 2,
+                "unit-of-measure": "cloves",
+                "ingredient": "garlic, minced"
+            },
+            {
+                "quantity": 400,
+                "unit-of-measure": "g",
+                "ingredient": "canned tomatoes"
+            },
+            {
+                "quantity": 2,
+                "unit-of-measure": "tbsp",
+                "ingredient": "olive oil"
+            },
+            {
+                "quantity": null,
+                "unit-of-measure": null,
+                "ingredient": "salt and pepper to taste"
+            },
+            {
+                "quantity": null,
+                "unit-of-measure": null,
+                "ingredient": "fresh basil leaves for garnish"
+            }
+        ],
+        "instructions": [
+            {
+                "step-number": 1,
+                "step-text": "Cook the spaghetti according to package instructions. Drain and set aside."
+            },
+            {
+                "step-number": 2,
+                "step-text": "In a large pan, heat olive oil over medium heat. Add chopped onion and minced garlic, and sauté until translucent."
+            },
+            {
+                "step-number": 3,
+                "step-text": "Add minced beef to the pan and cook until browned."
+            },
+            {
+                "step-number": 4,
+                "step-text": "Pour in the canned tomatoes, and season with salt and pepper. Let it simmer for 15-20 minutes."
+            },
+            {
+                "step-number": 5,
+                "step-text": "Serve the sauce over the cooked spaghetti and garnish with fresh basil leaves."
+            }
+        ],
+        "prep_time": "15 minutes",
+        "cook_time": "30 minutes",
+        "servings": 2
+    },
+    {
+        "recipe_id": 2,
+        "name": "Chicken Caesar Salad",
+        "calories" : 450,
+        "ingredients": [
+            {
+                "quantity": 2,
+                "unit-of-measure": "cups",
+                "ingredient": "romaine lettuce, chopped"
+            },
+            {
+                "quantity": 1,
+                "unit-of-measure": "count",
+                "ingredient": "grilled chicken breast, sliced"
+            },
+            {
+                "quantity": "1/4",
+                "unit-of-measure": "cup",
+                "ingredient": "Caesar dressing"
+            },
+            {
+                "quantity": "1/4",
+                "unit-of-measure": "cup",
+                "ingredient": "parmesan cheese, grated"
+            },
+            {
+                "quantity": "1/2",
+                "unit-of-measure": "cup",
+                "ingredient": "croutons"
+            }
+        ],
+        "instructions": [
+            {
+                "step-number": 1,
+                "step-text": "In a large bowl, combine chopped romaine lettuce and sliced grilled chicken."
+            },
+            {
+                "step-number": 2,
+                "step-text": "Drizzle Caesar dressing over the salad and toss to coat evenly."
+            },
+            {
+                "step-number": 3,
+                "step-text": "Sprinkle grated parmesan cheese and croutons on top."
+            },
+            {
+                "step-number": 4,
+                "step-text": "Serve immediately."
+            }
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "0 minutes",
+        "servings": 1
+    },
+    {
+        "recipe_id": 3,
+        "name": "Pancakes",
+        "calories" : 350,
+        "ingredients": [
+            {
+                "quantity": 1,
+                "unit-of-measure": "cup",
+                "ingredient": "all-purpose flour"
+            },
+            {
+                "quantity": 2,
+                "unit-of-measure": "tbsp",
+                "ingredient": "sugar"
+            },
+            {
+                "quantity": 1,
+                "unit-of-measure": "tsp",
+                "ingredient": "baking powder"
+            },
+            {
+                "quantity": "1/2",
+                "unit-of-measure": "tsp",
+                "ingredient": "salt"
+            },
+            {
+                "quantity": 1,
+                "unit-of-measure": "cup",
+                "ingredient": "milk"
+            },
+            {
+                "quantity": 1,
+                "unit-of-measure": "count",
+                "ingredient": "egg"
+            },
+            {
+                "quantity": 2,
+                "unit-of-measure": "tbsp",
+                "ingredient": "melted butter"
+            }
+        ],
+        "instructions": [
+            {
+                "step-number": 1,
+                "step-text": "In a bowl, mix flour, sugar, baking powder, and salt."
+            },
+            {
+                "step-number": 2,
+                "step-text": "In another bowl, whisk together milk, egg, and melted butter."
+            },
+            {
+                "step-number": 3,
+                "step-text": "Pour the wet ingredients into the dry ingredients and stir until just combined."
+            },
+            {
+                "step-number": 4,
+                "step-text": "Heat a non-stick skillet over medium heat. Pour 1/4 cup of batter for each pancake. Cook until bubbles form on the surface, then flip and cook until golden brown."
+            },
+            {
+                "step-number": 5,
+                "step-text": "Serve warm with syrup or toppings of choice."
+            }
+        ],
+        "prep_time": "10 minutes",
+        "cook_time": "15 minutes",
+        "servings": 4
+    }
+]
