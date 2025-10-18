@@ -4,7 +4,7 @@ import Hamburger from 'hamburger-react';
 
 const Navigation = () => {
 
-    const [loggedIn, isLoggedIn] = useState(false);
+    const [loggedIn, isLoggedIn] = useState(true);
 
     const handleClick = () => {
         isLoggedIn(!loggedIn);
@@ -19,11 +19,20 @@ const Navigation = () => {
                 <div class="justify-self-end self-center md:hidden">
                     <Hamburger size={20} color="white" />
                 </div>
+                {loggedIn ? 
+                <div class="hidden md:justify-self-end md:flex md:py-3 md:items-center">
+                    <Link to="recipes" class="px-4">Recipes</Link>
+                    <Link to="meal-plan" class="px-4">Plan</Link>
+                    <Link to="grocery-list" class="px-4">Grocery</Link>
+                    <button class="px-4" onClick={handleClick}>{loggedIn ? "Logout" : "Login"}</button>
+                </div> 
+                : 
                 <div class="hidden md:justify-self-end md:flex md:py-3 md:items-center">
                     <Link to="/" class="px-4">Home</Link>
                     <Link to="about" class="px-4">About</Link>
                     <button class="px-4" onClick={handleClick}>{loggedIn ? "Logout" : "Login"}</button>
-                </div>
+                </div>}
+
             </nav>
         </header>
     )
