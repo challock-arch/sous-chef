@@ -8,6 +8,8 @@ import Login from './pages/Login'
 import Recipes from './pages/Recipes'
 import MealPlanning from './pages/MealPlanning'
 import GroceryList from './pages/GroceryList'
+import MisEnPlace from './pages/MisEnPlace'
+import Walkthrough from './pages/Walkthrough'
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
       <Route path="/recipes" element ={<Recipes />} />
       <Route path="/meal-plan" element ={<MealPlanning />} />
       <Route path="/grocery-list" element ={<GroceryList />} />
+      <Route path ="/recipe/:id" element ={<MisEnPlace />} />
+      <Route path ="/recipe/walkthrough/:id" element ={<Walkthrough />} />
     </Routes>
     <Footer/>
     </BrowserRouter>
