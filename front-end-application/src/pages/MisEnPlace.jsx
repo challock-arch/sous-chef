@@ -20,9 +20,9 @@ const MisEnPlace = () => {
                         </ul>
                     </div>
                     <div class="grid grid-cols-2 md:mx-10">
-                        <div class="justify-self-start md:text-2xl">
+                        <Link to="/recipes" class="justify-self-start md:text-2xl">
                         <Button type="button" msg="Back" />
-                        </div>
+                        </Link>
                         <Link class="justify-self-end md:text-2xl" to={`/recipe/walkthrough/${recipe.recipe_id}`}>
                         <Button type="button" msg="Start Cooking!" />
                         </Link>
