@@ -47,23 +47,23 @@
         ],
         "instructions": [
             {
-                "step-number": 1,
+                "step_number": 1,
                 "step_text": "Cook the spaghetti according to package instructions. Drain and set aside."
             },
             {
-                "step-number": 2,
+                "step_number": 2,
                 "step_text": "In a large pan, heat olive oil over medium heat. Add chopped onion and minced garlic, and sauté until translucent."
             },
             {
-                "step-number": 3,
+                "step_number": 3,
                 "step_text": "Add minced beef to the pan and cook until browned."
             },
             {
-                "step-number": 4,
+                "step_number": 4,
                 "step_text": "Pour in the canned tomatoes, and season with salt and pepper. Let it simmer for 15-20 minutes."
             },
             {
-                "step-number": 5,
+                "step_number": 5,
                 "step_text": "Serve the sauce over the cooked spaghetti and garnish with fresh basil leaves."
             }
         ],
@@ -104,19 +104,19 @@
         ],
         "instructions": [
             {
-                "step-number": 1,
+                "step_number": 1,
                 "step_text": "In a large bowl, combine chopped romaine lettuce and sliced grilled chicken."
             },
             {
-                "step-number": 2,
+                "step_number": 2,
                 "step_text": "Drizzle Caesar dressing over the salad and toss to coat evenly."
             },
             {
-                "step-number": 3,
+                "step_number": 3,
                 "step_text": "Sprinkle grated parmesan cheese and croutons on top."
             },
             {
-                "step-number": 4,
+                "step_number": 4,
                 "step_text": "Serve immediately."
             }
         ],
@@ -167,23 +167,23 @@
         ],
         "instructions": [
             {
-                "step-number": 1,
+                "step_number": 1,
                 "step_text": "In a bowl, mix flour, sugar, baking powder, and salt."
             },
             {
-                "step-number": 2,
+                "step_number": 2,
                 "step_text": "In another bowl, whisk together milk, egg, and melted butter."
             },
             {
-                "step-number": 3,
+                "step_number": 3,
                 "step_text": "Pour the wet ingredients into the dry ingredients and stir until just combined."
             },
             {
-                "step-number": 4,
+                "step_number": 4,
                 "step_text": "Heat a non-stick skillet over medium heat. Pour 1/4 cup of batter for each pancake. Cook until bubbles form on the surface, then flip and cook until golden brown."
             },
             {
-                "step-number": 5,
+                "step_number": 5,
                 "step_text": "Serve warm with syrup or toppings of choice."
             }
         ],
