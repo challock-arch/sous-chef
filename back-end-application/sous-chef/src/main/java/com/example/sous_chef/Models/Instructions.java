@@ -1,21 +1,23 @@
 package com.example.sous_chef.Models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.*;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
-@AllArgsConstructor
 @Entity
-public class Instructions {
-    @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private int instructions_id;
+public class Instructions extends IDAbstract {
+
     private int step_number;
+
     private String step_text;
+
+    @ManyToOne
+    @JsonManagedReference
+    @JoinColumn(name = "recipe_id", nullable = false)
+    private Recipes recipe;
 }
