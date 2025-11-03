@@ -1,6 +1,6 @@
 package com.example.sous_chef.Models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,11 +24,11 @@ public class Recipes extends IDAbstract {
 
     private int cook_time_minutes;
 
-    @OneToMany(mappedBy = "recipe")
-    @JsonBackReference
+    @OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private final List<Ingredients> ingredients = new ArrayList<>();
 
-    @OneToMany(mappedBy = "recipe")
-    @JsonBackReference
+    @OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private final List<Instructions> instructions = new ArrayList<>();
 }

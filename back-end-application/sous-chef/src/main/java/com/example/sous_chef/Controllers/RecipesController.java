@@ -9,12 +9,12 @@ import com.example.sous_chef.Models.Recipes;
 import com.example.sous_chef.Repositories.IngredientsRepository;
 import com.example.sous_chef.Repositories.InstructionsRepository;
 import com.example.sous_chef.Repositories.RecipesRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.LongStream;
 
 @RestController
 @RequestMapping("/recipes")
@@ -50,7 +50,6 @@ public class RecipesController {
         recipe.setCook_time_minutes(recipeData.getCook_time_minutes());
         Recipes saved = recipesRepository.save(recipe);
 
-
         if(recipeData.getIngredients() != null) {
             List<Ingredients> ingredients = new ArrayList<>();
             for (IngredientsDTO ingredientDTO : recipeData.getIngredients()) {
@@ -85,6 +84,25 @@ public class RecipesController {
             recipe.setServings(recipeDetails.getServings());
             recipe.setPrep_time_minutes(recipeDetails.getPrep_time_minutes());
             recipe.setCook_time_minutes(recipeDetails.getCook_time_minutes());
+
+            recipe.getIngredients().clear();
+
+            List<Ingredients> updatedIngredients = recipeDetails.getIngredients();
+            for (Ingredients ing : updatedIngredients) {
+                ing.setRecipe(recipe);
+            }
+
+            recipe.getIngredients().addAll(updatedIngredients);
+
+            recipe.getInstructions().clear();
+
+            List<Instructions> updatedInstructions = recipeDetails.getInstructions();
+            for (Instructions instruction : updatedInstructions) {
+                instruction.setRecipe(recipe);
+            }
+
+            recipe.getInstructions().addAll(updatedInstructions);
+
             return recipesRepository.save(recipe);
         } else {
             return null;
@@ -92,6 +110,7 @@ public class RecipesController {
     };
 
     @DeleteMapping("/{id}")
+    @Transactional
     public void deleteRecipe(@PathVariable Integer id) {
         recipesRepository.deleteById(id);
     };

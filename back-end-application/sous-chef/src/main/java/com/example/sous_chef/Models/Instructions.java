@@ -1,7 +1,7 @@
 package com.example.sous_chef.Models;
 
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,7 +17,7 @@ public class Instructions extends IDAbstract {
     private String step_text;
 
     @ManyToOne
-    @JsonManagedReference
     @JoinColumn(name = "recipe_id", nullable = false)
+    @JsonBackReference
     private Recipes recipe;
 }
