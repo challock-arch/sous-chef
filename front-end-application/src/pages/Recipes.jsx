@@ -9,7 +9,7 @@ const Recipes = () => {
         <h2>username</h2>
         <h2>Number of Recipes</h2>
         </div>
-        <div class="grid gap-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-10 mb-10">
+        <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mb-10">
             {RecipeData.map((recipe) => (
                 <RecipeCard 
                     id={recipe.recipe_id}

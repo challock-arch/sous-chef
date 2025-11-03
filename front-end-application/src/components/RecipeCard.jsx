@@ -10,7 +10,11 @@ const RecipeCard = ({id, name, prepTime, cookTime, servings, calories}) => {
             <h2 class="text-stone-400">Prep Time: {prepTime}</h2>
             <h2 class="text-stone-400">Cook Time: {cookTime}</h2>
             <br />
+            <div class="flex justify-around items-center">
             <Link to={`/recipe/${id}`}><Button type="button" msg="Make It!" /></Link>
+            <i class="fa-solid fa-pencil fa-xl"></i>
+            <i class="fa-solid fa-trash-can fa-xl"></i>
+            </div>
         </div>
     )
 }
