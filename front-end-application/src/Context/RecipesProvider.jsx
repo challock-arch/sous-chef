@@ -3,7 +3,7 @@ import { createContext } from "react";
 
 export const RecipeContext = createContext();
 
-export function RecipeProvider({children}) {
+export function RecipeProvider({ children }) {
     const [recipes, setRecipes] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -23,8 +23,22 @@ export function RecipeProvider({children}) {
         fetchRecipes();
     }, []);
 
+    const addRecipe = (recipe) => {
+        setRecipes((prev) => [...prev, { recipe_id: Date.now(), ...recipe }])
+    }
+
+    const editRecipe = (updatedRecipe) => {
+        setRecipes((prev) =>
+            prev.map((recipe) => (recipe.recipe_id === updatedRecipe.recipe_id ? updatedRecipe : recipe))
+        );
+    }
+
+    const deleteRecipe = (id) => {
+        setRecipes((prev) => prev.filter((recipe) => recipe.recipe_id !== id));
+    };
+
     return (
-        <RecipeContext value={{recipes, loading}}>
+        <RecipeContext value={{ recipes, loading, addRecipe, editRecipe, deleteRecipe }}>
             {children}
         </RecipeContext>
     )
