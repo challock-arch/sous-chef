@@ -3,7 +3,7 @@ import MealPlanningCard from "../components/MealPlanningCard";
 import { useRecipe } from "../Context/RecipesProvider";
 
 const MealPlanning = () => {
-
+    //FUTURE: persist mealPlan data after refresh with additional logic
     const { recipes, clearMealPlan, mealPlan } = useRecipe();
 
     const mealPlanRecipes = recipes.filter((recipe) => mealPlan.includes(recipe.id));

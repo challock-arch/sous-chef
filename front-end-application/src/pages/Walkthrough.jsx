@@ -14,6 +14,7 @@ const Walkthrough = () => {
 
     return (
         <>
+        {/* Filter recipes to current recipe based on path variable */}
             {recipes.filter(recipe => recipe.id.toString() === currentRecipe.id).map((recipe) => (
                 <div key={recipe.id} className="flex-col mx-10 mt-10 mb-30">
                     <h2 className="text-2xl font-semi-bold md:pb-7.5 md:text-4xl">{recipe.name}</h2>

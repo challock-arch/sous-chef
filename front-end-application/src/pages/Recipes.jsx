@@ -8,11 +8,12 @@ const Recipes = () => {
 
     return (
         <>
-            <div className="bg-stone-200 p-4 mx-10 mt-10 rounded-lg text-center md:text-left">
+        {/* FUTURE: To add when user profiles and Auth is incorporated */}
+            {/* <div className="bg-stone-200 p-4 mx-10 mt-10 rounded-lg text-center md:text-left">
                 <h1>Name</h1>
                 <h2>username</h2>
                 <h2>Number of Recipes</h2>
-            </div>
+            </div> */}
             <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mb-30">
                 {recipes.map((recipe) => (
                     <RecipeCard

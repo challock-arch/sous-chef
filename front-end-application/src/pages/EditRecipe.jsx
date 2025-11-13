@@ -98,7 +98,6 @@ const EditRecipe = () => {
         e.preventDefault();
         console.log(recipeData);
         editRecipe(id, recipeData);
-        alert("Recipe Submitted Successfully!");
     }
 
     return (

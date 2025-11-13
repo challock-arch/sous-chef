@@ -21,9 +21,11 @@ const Navigation = () => {
                 <div className="px-4 self-center">
                     <Link to="/">Logo Placeholder</Link>
                 </div>
+                {/* hamburger-react menu icon with interaction */}
                 <div className="justify-self-end self-center md:hidden">
                     <Hamburger size={20} color="white" onToggle={toggleMenu} />
                 </div>
+                {/* logic for collapsing menu items when application is at mobile breakpoint */}
                 {loggedIn ?
                     <div className={`${!opened ? "hidden" : "grid grid-cols-1 text-left"} md:justify-self-end md:flex md:py-3 md:items-center`}>
                         <Link to="recipes" className={`${opened ? "py-3" : ""} px-4`}>Recipes</Link>
