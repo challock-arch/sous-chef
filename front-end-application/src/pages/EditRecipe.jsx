@@ -11,19 +11,21 @@ const EditRecipe = () => {
 
     const currentRecipeId = useParams();
 
-    const currentRecipe = recipes.filter(recipe => recipe.recipe_id.toString() === currentRecipeId.id)[0]
+    const { id } = useParams();
+
+    const currentRecipe = recipes.filter(recipe => recipe.id.toString() === currentRecipeId.id)[0]
 
     const [recipeData, setRecipeData] = useState({
-        name: "",
+        recipe_name: "",
         calories: "",
-        prep_time: "",
-        cook_time: "",
+        prep_time_minutes: "",
+        cook_time_minutes: "",
         servings: "",
         ingredients: [
             {
                 quantity: "",
                 unit_of_measure: "",
-                ingredient: ""
+                name: ""
             }
         ],
         instructions: [
@@ -65,7 +67,7 @@ const EditRecipe = () => {
             ...recipeData,
             ingredients: [
                 ...recipeData.ingredients,
-                { quantity: "", unit_of_measure: "", ingredient: "" },
+                { quantity: "", unit_of_measure: "", name: "" },
             ]
         })
     }
@@ -94,7 +96,8 @@ const EditRecipe = () => {
 
     const handleSave = (e) => {
         e.preventDefault();
-        editRecipe(recipeData);
+        console.log(recipeData);
+        editRecipe(id, recipeData);
         alert("Recipe Submitted Successfully!");
     }
 
@@ -107,8 +110,8 @@ const EditRecipe = () => {
                         type="text"
                         name="name"
                         placeholder="Enter Recipe Name Here"
-                        value={recipeData.name}
-                        onChange={(e) => handleRecipeChange("name", e.target.value)}
+                        value={recipeData.recipe_name}
+                        onChange={(e) => handleRecipeChange("recipe_name", e.target.value)}
                     />
                     <FormLine
                         label="Servings"
@@ -123,16 +126,16 @@ const EditRecipe = () => {
                         type="number"
                         name="prep_time"
                         placeholder="Estimated Prep Time"
-                        value={recipeData.prep_time}
-                        onChange={(e) => handleRecipeChange("prep_time", e.target.value)}
+                        value={recipeData.prep_time_minutes}
+                        onChange={(e) => handleRecipeChange("prep_time_minutes", e.target.value)}
                     />
                     <FormLine
                         label="Cook Time"
                         type="number"
                         name="cook_time"
                         placeholder="Estimated Cook Time"
-                        value={recipeData.cook_time}
-                        onChange={(e) => handleRecipeChange("cook_time", e.target.value)}
+                        value={recipeData.cook_time_minutes}
+                        onChange={(e) => handleRecipeChange("cook_time_minutes", e.target.value)}
                     />
                     <FormLine
                         label="Calories"
@@ -178,9 +181,9 @@ const EditRecipe = () => {
                                     <td>
                                         <input
                                             type="text"
-                                            value={row.ingredient}
+                                            value={row.name}
                                             onChange={(e) =>
-                                                handleIngredientChange(index, "ingredient", e.target.value)
+                                                handleIngredientChange(index, "name", e.target.value)
                                             }
                                             className="w-full"
                                         />

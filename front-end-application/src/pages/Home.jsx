@@ -2,7 +2,7 @@ import image from '../assets/images/pexels-goumbik-616484.jpg';
 
 const Home = () => {
     return (
-        <>
+        <div title="cutting board">
             <div className="h-150 flex-col justify-center content-center p-3" style={{ backgroundImage: `url(${image})` }}>
                 <div className="bg-stone-100/65 rounded-md p-5">
                     <h1 className="pb-5 text-4xl md:text-6xl text-center md:text-right md:pr-10 ">Welcome to Sous Chef!</h1>
@@ -17,7 +17,7 @@ const Home = () => {
                 <h2 className="text-4xl pb-2">Grocery Lists</h2>
                 <p className="text-lg pb-4">To ensure you have everything you'll need for your meals during the week, Sous Chef helps to create shopping lists that include everything right from your recipes so it's easy to keep track of everything!</p>
             </div>
-        </>
+        </div>
     )
 }
 
