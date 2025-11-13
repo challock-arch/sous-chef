@@ -35,13 +35,13 @@
                 "ingredient": "olive oil"
             },
             {
-                "quantity": null,
-                "unit_of_measure": null,
+                "quantity": "",
+                "unit_of_measure": "",
                 "ingredient": "salt and pepper to taste"
             },
             {
-                "quantity": null,
-                "unit_of_measure": null,
+                "quantity": "",
+                "unit_of_measure": "",
                 "ingredient": "fresh basil leaves for garnish"
             }
         ],
@@ -67,8 +67,8 @@
                 "step_text": "Serve the sauce over the cooked spaghetti and garnish with fresh basil leaves."
             }
         ],
-        "prep_time": "15 minutes",
-        "cook_time": "30 minutes",
+        "prep_time": 15,
+        "cook_time": 30,
         "servings": 2
     },
     {
@@ -120,8 +120,8 @@
                 "step_text": "Serve immediately."
             }
         ],
-        "prep_time": "10 minutes",
-        "cook_time": "0 minutes",
+        "prep_time": 10,
+        "cook_time": 0,
         "servings": 1
     },
     {
@@ -187,8 +187,8 @@
                 "step_text": "Serve warm with syrup or toppings of choice."
             }
         ],
-        "prep_time": "10 minutes",
-        "cook_time": "15 minutes",
+        "prep_time": 10,
+        "cook_time": 15,
         "servings": 4
     }
 ]
