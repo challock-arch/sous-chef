@@ -28,7 +28,7 @@ const Recipes = () => {
                 ))}
             </div>
             <Link to="/newRecipe">
-                <div className="fixed bottom-20 right-10 px-3 py-4 rounded-full bg-lime-950">
+                <div className="fixed bottom-20 right-10 px-3 py-4 rounded-full bg-lime-950 animate-pulse">
                     <i className="fa-solid fa-clone fa-2xl text-stone-200"></i>
                 </div>
             </Link>
