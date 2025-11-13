@@ -16,13 +16,13 @@ const Recipes = () => {
             <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mb-30">
                 {recipes.map((recipe) => (
                     <RecipeCard
-                        key={recipe.recipe_id}
-                        id={recipe.recipe_id}
-                        name={recipe.name}
+                        key={recipe.id}
+                        id={recipe.id}
+                        name={recipe.recipe_name}
                         servings={recipe.servings}
                         calories={recipe.calories}
-                        prepTime={recipe.prep_time}
-                        cookTime={recipe.cook_time}
+                        prepTime={recipe.prep_time_minutes}
+                        cookTime={recipe.cook_time_minutes}
                     />
                 ))}
             </div>

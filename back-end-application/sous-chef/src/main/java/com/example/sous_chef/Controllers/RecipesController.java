@@ -76,7 +76,10 @@ public class RecipesController {
     };
 
     @PutMapping("/{id}")
-    public Recipes updateRecipe(@PathVariable Integer id, @RequestBody Recipes recipeDetails) {
+    public Recipes updateRecipe(@PathVariable Integer id, @RequestBody RecipeDTO recipeDetails) {
+        System.out.println("Updating recipe ID:" + id);
+        System.out.println("Updated data: " + recipeDetails);
+
         Recipes recipe = recipesRepository.findById(id).orElse(null);
         if (recipe != null) {
             recipe.setRecipe_name(recipeDetails.getRecipe_name());
@@ -87,21 +90,28 @@ public class RecipesController {
 
             recipe.getIngredients().clear();
 
-            List<Ingredients> updatedIngredients = recipeDetails.getIngredients();
-            for (Ingredients ing : updatedIngredients) {
-                ing.setRecipe(recipe);
+            if (recipeDetails.getIngredients() != null) {
+                for (IngredientsDTO ingDTO : recipeDetails.getIngredients()) {
+                    Ingredients ingredient = new Ingredients();
+                    ingredient.setName(ingDTO.getName());
+                    ingredient.setQuantity(ingDTO.getQuantity());
+                    ingredient.setUnit_of_measure((ingDTO.getUnit_of_measure()));
+                    ingredient.setRecipe(recipe);
+                    recipe.getIngredients().add(ingredient);
+                }
             }
-
-            recipe.getIngredients().addAll(updatedIngredients);
 
             recipe.getInstructions().clear();
 
-            List<Instructions> updatedInstructions = recipeDetails.getInstructions();
-            for (Instructions instruction : updatedInstructions) {
-                instruction.setRecipe(recipe);
+            if (recipeDetails.getInstructions() != null) {
+                for (InstructionsDTO instDTO : recipeDetails.getInstructions()) {
+                    Instructions instruction = new Instructions();
+                    instruction.setStep_number(instDTO.getStep_number());
+                    instruction.setStep_text(instDTO.getStep_text());
+                    instruction.setRecipe(recipe);
+                    recipe.getInstructions().add(instruction);
+                }
             }
-
-            recipe.getInstructions().addAll(updatedInstructions);
 
             return recipesRepository.save(recipe);
         } else {

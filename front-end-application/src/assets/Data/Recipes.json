@@ -1,48 +1,47 @@
 [
     {
-        "recipe_id": 1,
-        "name": "Spaghetti Bolognese",
+        "recipe_name": "Spaghetti Bolognese",
         "calories" : 600,
         "ingredients": [
             {
                 "quantity": 200,
                 "unit_of_measure": "g",
-                "ingredient": "spaghetti noodles"
+                "name": "spaghetti noodles"
             },
             {
                 "quantity": 100,
                 "unit_of_measure": "g",
-                "ingredient": "minced beef"
+                "name": "minced beef"
             },
             {
                 "quantity": 1,
                 "unit_of_measure": "count",
-                "ingredient": "onion, chopped"
+                "name": "onion, chopped"
             },
             {
                 "quantity": 2,
                 "unit_of_measure": "cloves",
-                "ingredient": "garlic, minced"
+                "name": "garlic, minced"
             },
             {
                 "quantity": 400,
                 "unit_of_measure": "g",
-                "ingredient": "canned tomatoes"
+                "name": "canned tomatoes"
             },
             {
                 "quantity": 2,
                 "unit_of_measure": "tbsp",
-                "ingredient": "olive oil"
+                "name": "olive oil"
             },
             {
                 "quantity": "",
                 "unit_of_measure": "",
-                "ingredient": "salt and pepper to taste"
+                "name": "salt and pepper to taste"
             },
             {
                 "quantity": "",
                 "unit_of_measure": "",
-                "ingredient": "fresh basil leaves for garnish"
+                "name": "fresh basil leaves for garnish"
             }
         ],
         "instructions": [
@@ -67,39 +66,38 @@
                 "step_text": "Serve the sauce over the cooked spaghetti and garnish with fresh basil leaves."
             }
         ],
-        "prep_time": 15,
-        "cook_time": 30,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 30,
         "servings": 2
     },
     {
-        "recipe_id": 2,
-        "name": "Chicken Caesar Salad",
+        "recipe_name": "Chicken Caesar Salad",
         "calories" : 450,
         "ingredients": [
             {
                 "quantity": 2,
                 "unit_of_measure": "cups",
-                "ingredient": "romaine lettuce, chopped"
+                "name": "romaine lettuce, chopped"
             },
             {
                 "quantity": 1,
                 "unit_of_measure": "count",
-                "ingredient": "grilled chicken breast, sliced"
+                "name": "grilled chicken breast, sliced"
             },
             {
                 "quantity": "1/4",
                 "unit_of_measure": "cup",
-                "ingredient": "Caesar dressing"
+                "name": "Caesar dressing"
             },
             {
                 "quantity": "1/4",
                 "unit_of_measure": "cup",
-                "ingredient": "parmesan cheese, grated"
+                "name": "parmesan cheese, grated"
             },
             {
                 "quantity": "1/2",
                 "unit_of_measure": "cup",
-                "ingredient": "croutons"
+                "name": "croutons"
             }
         ],
         "instructions": [
@@ -120,49 +118,48 @@
                 "step_text": "Serve immediately."
             }
         ],
-        "prep_time": 10,
-        "cook_time": 0,
+        "prep_time_minutes": 10,
+        "cook_time_minutes": 0,
         "servings": 1
     },
     {
-        "recipe_id": 3,
-        "name": "Pancakes",
+        "recipe_name": "Pancakes",
         "calories" : 350,
         "ingredients": [
             {
                 "quantity": 1,
                 "unit_of_measure": "cup",
-                "ingredient": "all-purpose flour"
+                "name": "all-purpose flour"
             },
             {
                 "quantity": 2,
                 "unit_of_measure": "tbsp",
-                "ingredient": "sugar"
+                "name": "sugar"
             },
             {
                 "quantity": 1,
                 "unit_of_measure": "tsp",
-                "ingredient": "baking powder"
+                "name": "baking powder"
             },
             {
                 "quantity": "1/2",
                 "unit_of_measure": "tsp",
-                "ingredient": "salt"
+                "name": "salt"
             },
             {
                 "quantity": 1,
                 "unit_of_measure": "cup",
-                "ingredient": "milk"
+                "name": "milk"
             },
             {
                 "quantity": 1,
                 "unit_of_measure": "count",
-                "ingredient": "egg"
+                "name": "egg"
             },
             {
                 "quantity": 2,
                 "unit_of_measure": "tbsp",
-                "ingredient": "melted butter"
+                "name": "melted butter"
             }
         ],
         "instructions": [
@@ -187,8 +184,8 @@
                 "step_text": "Serve warm with syrup or toppings of choice."
             }
         ],
-        "prep_time": 10,
-        "cook_time": 15,
+        "prep_time_minutes": 10,
+        "cook_time_minutes": 15,
         "servings": 4
     }
 ]

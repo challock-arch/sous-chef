@@ -6,7 +6,7 @@ const MealPlanning = () => {
 
     const { recipes, clearMealPlan, mealPlan } = useRecipe();
 
-    const mealPlanRecipes = recipes.filter((recipe) => mealPlan.includes(recipe.recipe_id));
+    const mealPlanRecipes = recipes.filter((recipe) => mealPlan.includes(recipe.id));
 
     const handleClear = () => {
         clearMealPlan();
@@ -22,8 +22,8 @@ const MealPlanning = () => {
             <div className="grid grid-cols-1 gap-10 m-10 rounded-md">
                 {mealPlanRecipes.map((recipe) => (
                     <MealPlanningCard
-                        key={recipe.recipe_id}
-                        recipe_id={recipe.recipe_id}
+                        key={recipe.id}
+                        recipe_id={recipe.id}
                         recipeName={recipe.name}
                         calories={recipe.calories}
                         servings={recipe.servings}

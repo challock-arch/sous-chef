@@ -12,10 +12,6 @@ const RecipeCard = ({ id, name, prepTime, cookTime, servings, calories }) => {
             removeRecipeFromMealPlan(id)
     };
 
-    const handleDelete = () => {
-        deleteRecipe(id);
-    };
-
     return (
         <div id={`recipe-${id}`} className="bg-stone-200 rounded-md p-4">
             <div className="relative grid grid-cols-3">
@@ -35,7 +31,7 @@ const RecipeCard = ({ id, name, prepTime, cookTime, servings, calories }) => {
             <div className="flex justify-around items-center">
                 <Link to={`/recipe/${id}`}><Button type="button" msg="Make It!" /></Link>
                 <Link to={`/editRecipe/${id}`}><i className="fa-solid fa-pencil fa-xl text-lime-950"></i></Link>
-                <i className="fa-solid fa-trash-can fa-xl text-lime-950" onClick={handleDelete}></i>
+                <i className="fa-solid fa-trash-can fa-xl text-lime-950" onClick={() => deleteRecipe(id)}></i>
             </div>
         </div>
     )
