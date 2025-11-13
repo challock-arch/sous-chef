@@ -6,7 +6,7 @@ import { useRecipe } from "../Context/RecipesProvider";
 
 const Walkthrough = () => {
 
-    const {recipes} = useRecipe();
+    const { recipes } = useRecipe();
 
     const currentRecipe = useParams();
 

@@ -4,7 +4,7 @@ import { useRecipe } from "../Context/RecipesProvider";
 
 const MisEnPlace = () => {
 
-    const {recipes} = useRecipe();
+    const { recipes } = useRecipe();
 
     const currentRecipe = useParams();
 
@@ -23,10 +23,10 @@ const MisEnPlace = () => {
                     </div>
                     <div className="grid grid-cols-2 md:mx-10">
                         <Link to="/recipes" className="justify-self-start">
-                        <Button type="button" msg="Back" />
+                            <Button type="button" msg="Back" />
                         </Link>
                         <Link className="justify-self-end" to={`/recipe/walkthrough/${recipe.recipe_id}`}>
-                        <Button type="button" msg="Start Cooking!" />
+                            <Button type="button" msg="Start Cooking!" />
                         </Link>
                     </div>
                 </div>

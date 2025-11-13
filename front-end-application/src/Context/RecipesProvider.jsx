@@ -5,6 +5,7 @@ export const RecipeContext = createContext();
 
 export function RecipeProvider({ children }) {
     const [recipes, setRecipes] = useState([]);
+    let [mealPlan, setMealPlan] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -37,8 +38,20 @@ export function RecipeProvider({ children }) {
         setRecipes((prev) => prev.filter((recipe) => recipe.recipe_id !== id));
     };
 
+
+    const addRecipeToMealPlan = (id) => {
+        setMealPlan((prev) =>
+            prev.includes(id) ? prev : [...prev, id]);
+    };
+
+    const removeRecipeFromMealPlan = (recipeId) => {
+        setMealPlan((prev) => prev.filter((mealPlanId) => mealPlanId !== recipeId))
+    };
+
+    const clearMealPlan = () => setMealPlan([]);
+
     return (
-        <RecipeContext value={{ recipes, loading, addRecipe, editRecipe, deleteRecipe }}>
+        <RecipeContext value={{ recipes, loading, addRecipe, editRecipe, deleteRecipe, mealPlan, addRecipeToMealPlan, removeRecipeFromMealPlan, clearMealPlan }}>
             {children}
         </RecipeContext>
     )

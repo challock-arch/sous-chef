@@ -21,22 +21,21 @@ const Navigation = () => {
                 <div className="px-4 self-center">
                     <Link to="/">Logo Placeholder</Link>
                 </div>
-                {/* TODO: Add dropdown menu for sm breakpoint */}
                 <div className="justify-self-end self-center md:hidden">
-                    <Hamburger size={20} color="white" onToggle={toggleMenu}/>
+                    <Hamburger size={20} color="white" onToggle={toggleMenu} />
                 </div>
-                {loggedIn ? 
-                <div className={`${!opened ? "hidden" : "grid grid-cols-1 text-left"} md:justify-self-end md:flex md:py-3 md:items-center`}>
-                    <Link to="recipes" className={`${opened ? "py-3" : ""} px-4`}>Recipes</Link>
-                    <Link to="meal-plan" className={`${opened ? "py-3" : ""} px-4`}>Plan</Link>
-                    <button className={`${opened ? "text-left py-3" : ""} px-4`} onClick={handleClick}>{loggedIn ? "Logout" : "Login"}</button>
-                </div> 
-                : 
-                <div className={`${!opened ? "hidden" : "grid grid-cols-1 text-left"} md:justify-self-end md:flex md:py-3 md:items-center`}>
-                    <Link to="/" className={`${opened ? "py-3" : ""} px-4`}>Home</Link>
-                    <Link to="about" className={`${opened ? "py-3" : ""} px-4`}>About</Link>
-                    <button className={`${opened ? "text-left py-3" : ""} px-4`} onClick={handleClick}>{loggedIn ? "Logout" : "Login"}</button>
-                </div>}
+                {loggedIn ?
+                    <div className={`${!opened ? "hidden" : "grid grid-cols-1 text-left"} md:justify-self-end md:flex md:py-3 md:items-center`}>
+                        <Link to="recipes" className={`${opened ? "py-3" : ""} px-4`}>Recipes</Link>
+                        <Link to="meal-plan" className={`${opened ? "py-3" : ""} px-4`}>Plan</Link>
+                        <button className={`${opened ? "text-left py-3" : ""} px-4`} onClick={handleClick}>{loggedIn ? "Logout" : "Login"}</button>
+                    </div>
+                    :
+                    <div className={`${!opened ? "hidden" : "grid grid-cols-1 text-left"} md:justify-self-end md:flex md:py-3 md:items-center`}>
+                        <Link to="/" className={`${opened ? "py-3" : ""} px-4`}>Home</Link>
+                        <Link to="about" className={`${opened ? "py-3" : ""} px-4`}>About</Link>
+                        <button className={`${opened ? "text-left py-3" : ""} px-4`} onClick={handleClick}>{loggedIn ? "Logout" : "Login"}</button>
+                    </div>}
 
             </nav>
         </header>

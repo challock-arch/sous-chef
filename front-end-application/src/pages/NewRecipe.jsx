@@ -43,7 +43,7 @@ const NewRecipe = () => {
 
     const handleInstructionChange = (index, field, value) => {
         const updatedInstructions = recipeData.instructions.map((item, i) =>
-            i === index ? ({ ...item, [field] : value}) : ({...item})
+            i === index ? ({ ...item, [field]: value }) : ({ ...item })
         );
         setRecipeData({ ...recipeData, instructions: updatedInstructions });
     }
@@ -71,21 +71,19 @@ const NewRecipe = () => {
     const removeIngredientRow = (index) => {
         if (recipeData.ingredients.length === 1) return;
         const updated = recipeData.ingredients.filter((_, i) => i !== index);
-        console.log(updated);
-        setRecipeData({...recipeData, ingredients: updated})
+        setRecipeData({ ...recipeData, ingredients: updated })
     }
 
     const removeInstructionRow = (index) => {
-        if(recipeData.instructions.length === 1) return;
-        const u = recipeData.instructions.filter((_ , i) => i !== index);
-        setRecipeData({...recipeData, instructions: u});
+        if (recipeData.instructions.length === 1) return;
+        const u = recipeData.instructions.filter((_, i) => i !== index);
+        setRecipeData({ ...recipeData, instructions: u });
     }
 
     const handleSave = (e) => {
         e.preventDefault();
         addRecipe(recipeData);
         alert("Recipe Submitted Successfully!");
-        console.log(recipes);
     }
 
     return (

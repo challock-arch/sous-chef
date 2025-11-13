@@ -1,33 +1,41 @@
 import Button from "../components/Button";
-import RecipeData from "../assets/Data/Recipes.json"
 import MealPlanningCard from "../components/MealPlanningCard";
+import { useRecipe } from "../Context/RecipesProvider";
 
 const MealPlanning = () => {
 
-    let recipeQueue = [];
+    const { recipes, clearMealPlan, mealPlan } = useRecipe();
+
+    const mealPlanRecipes = recipes.filter((recipe) => mealPlan.includes(recipe.recipe_id));
+
+    const handleClear = () => {
+        clearMealPlan();
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('clicked!')
     }
 
     return (
         <div className="mb-30">
             <h1 className="text-2xl text-center mt-10 mb-10">Meal Planning & Shopping List</h1>
-            <div className="m-10 bg-stone-200 rounded-md">
-                <MealPlanningCard />
+            <div className="grid grid-cols-1 gap-10 m-10 rounded-md">
+                {mealPlanRecipes.map((recipe) => (
+                    <MealPlanningCard
+                        key={recipe.recipe_id}
+                        recipe_id={recipe.recipe_id}
+                        recipeName={recipe.name}
+                        calories={recipe.calories}
+                        servings={recipe.servings}
+                        prep_time={recipe.prep_time}
+                        cook_time={recipe.cook_time}
+                        ingredients={recipe.ingredients}
+                    />
+                ))}
             </div>
-            <form className="grid grid-cols-2" onSubmit={handleSubmit}>
-                <select id="recipe-select" className="ml-10 border-2 rounded-md border-stone-200">
-                    <option>Select a Recipe...</option>
-                    {RecipeData.map((recipe) => (
-                        <option key={`${recipe.recipe_id}`} id={`recipe-${recipe.recipe_id}`}>{recipe.name}</option>
-                    ))}
-                </select>
-                <div className="place-self-center">
-                    <Button type="submit" msg="Add Recipe" />
-                </div>
-            </form>
+            <div className="absolute place-self-center" onClick={handleClear}>
+                <Button type="button" msg="Clear Meal Plan" />
+            </div>
         </div>
     )
 }

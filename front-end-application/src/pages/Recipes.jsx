@@ -4,7 +4,7 @@ import { useRecipe } from "../Context/RecipesProvider";
 
 const Recipes = () => {
 
-    const {recipes, loading} = useRecipe();
+    const { recipes } = useRecipe();
 
     return (
         <>

@@ -1,4 +1,4 @@
-const Button = ({type, msg}) => {
+const Button = ({ type, msg }) => {
 
 
     return (

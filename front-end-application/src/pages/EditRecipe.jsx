@@ -10,7 +10,7 @@ const EditRecipe = () => {
     const { recipes, editRecipe } = useRecipe();
 
     const currentRecipeId = useParams();
-    
+
     const currentRecipe = recipes.filter(recipe => recipe.recipe_id.toString() === currentRecipeId.id)[0]
 
     const [recipeData, setRecipeData] = useState({
@@ -83,7 +83,6 @@ const EditRecipe = () => {
     const removeIngredientRow = (index) => {
         if (recipeData.ingredients.length === 1) return;
         const updated = recipeData.ingredients.filter((_, i) => i !== index);
-        console.log(updated);
         setRecipeData({ ...recipeData, ingredients: updated })
     }
 
@@ -97,7 +96,6 @@ const EditRecipe = () => {
         e.preventDefault();
         editRecipe(recipeData);
         alert("Recipe Submitted Successfully!");
-        console.log(recipes);
     }
 
     return (
