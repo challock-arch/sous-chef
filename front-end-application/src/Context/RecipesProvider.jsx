@@ -8,6 +8,7 @@ export function RecipeProvider({ children }) {
     let [mealPlan, setMealPlan] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    // Function to fetch current recipe data
     const fetchRecipes = async () => {
         try {
             const response = await fetch("http://localhost:8080/recipes");
@@ -20,6 +21,7 @@ export function RecipeProvider({ children }) {
         };
     };
     
+    //initial call to database for recipe information
     useEffect(() => {
         fetchRecipes();
     }, []);
@@ -75,7 +77,7 @@ export function RecipeProvider({ children }) {
         }
     };
 
-
+    // FUTURE: Meal Plan data to persist through refreshes
     const addRecipeToMealPlan = (id) => {
         setMealPlan((prev) =>
             prev.includes(id) ? prev : [...prev, id]);
